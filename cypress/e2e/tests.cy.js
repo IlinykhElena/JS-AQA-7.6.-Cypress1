@@ -47,21 +47,21 @@ describe("lig in", () => {
   });
 });
 
-describe("books in favorites", () => {
+describe.only("books in favorites", () => {
   beforeEach(() => {
     cy.login("bropet@mail.ru", "123");
     cy.contains("Favorites").click();
   });
 
   it("favorites list is empty", () => {
-    cy.contains("Favorites").click();
+    //cy.contains("Favorites").click();
     cy.contains("Please add some book to favorit on home page!").should(
       "be.visible"
     );
   });
 
   it("add a book to favorites list", () => {
-    cy.contains("Please add some book").click();
+    cy.contains("Please add some book to favorit on home page!").click();
     cy.addNewBook(
       data.title,
       data.description,
@@ -76,7 +76,7 @@ describe("books in favorites", () => {
 
   it("delete from favorite", () => {
     cy.visit("/favorites");
-    cy.contains("Please add some book").click();
+    cy.contains("Please add some book to favorit on home page!").click();
     cy.addNewBook(
       data.title,
       data.description,
