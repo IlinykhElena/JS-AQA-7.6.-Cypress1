@@ -1,0 +1,9 @@
+{
+  "email": "bropet@mail.ru",
+  "password": "123",
+  "title": "Book Title",
+  "description": "Description",
+  "fileCover": "cypress/fixtures/bookCover.jpg",
+  "fileBook": "cypress/fixtures/book.txt",
+  "authors": "Author"
+}

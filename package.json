@@ -1,0 +1,20 @@
+{
+  "name": "7_6_cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:notebook": "cypress run --config-file notebook.config.js",
+    "test:phone": "cypress run --config-file phone.config.js",
+    "test:headless:chrome": "cypress run --browser chrome --config-file notebook.config.js",
+    "test:headless:edge": "cypress run --browser edge --config-file phone.config.js",
+    "test:headded:chrome": "cypress run --headed --browser chrome --config-file phone.config.js",
+    "test:headded:edge": "cypress run --headed --browser edge --config-file notebook.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.17.2"
+  }
+}
